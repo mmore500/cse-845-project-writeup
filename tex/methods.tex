@@ -6,6 +6,11 @@ In this work we use the Modular Agent-Based Evolver\cite{bohm_mabe_2017} (MABE) 
 
 \subsection*{Markov Brains}
 
+We used Markov brains in this work as the evolved controller of our agents. The markov brains used here consist of four major components: The input vector, output vector, hidden vector, and logic gates. The first three components are simply vectors of values, typically bits, that the gate components can read from and write to. The size of the input, output, and hidden vectors must be decided before the brain is built. The sizes of the input and output vectors are determined by the world module (Section \ref{world}). The size of the hidden vector is independant and is a tunable parameter. 
+
+The gates of the markov brain are, typicaly, binary logic gates whose input nodes, output nodes, and internal logic are all determiend by interpreting the agent's genome. This genome-to-gates interpretation is all handled within MABE's markov brain module. Gates read from and write to any input, output, or hidden node specified by the genome. Gates can have between 0 and 4 input connections and between 0 and 4 output connections. The smallest functional gate is therefore a one-in-one-out gate whose logic can take on 4 unique configurations. The largest gate possible is a four-in-four-out gate with 256 potential configurations.
+
+In this work we also use trit gates, which work the same as  the gates described above, with the added benifit that the -1 form of the trit can provide down-regulation within the brain. Additionally the one-in-one-out trit gate capable of 9 configurations while the four-in-four-out trit gate has 6561.
 
 \subsection {Stigmergy World}\label{world}
 
@@ -53,4 +58,4 @@ As discussed in section \ref{mabe}, we used the Markov Brain MABE module to cont
 
 \subsection*{Stigmergic Chemical Evaporation Rate}
 
-With the previous two tests completed, we conduct our main experiment to determine how pheromone evaporation affects evolved foraging strategies and to what degree these strategies depend on the use of these pheromones as stigmergic signals.
+With the previous two tests completed, we conduct our main experiment to determine how pheromone evaporation affects evolved foraging strategies and to what degree these strategies depend on the use of these pheromones as stigmergic signals. The pheromone evaporation rate is given in units of world updates. We evolved agents with evaporation rates of 1000, 500, 100, 50, 10, 5, and 1. The evaporation rate of 1000 corresponds to perminant pheromone placment, and 1 corresponds to immediate evaporation.
