@@ -1,26 +1,56 @@
 \section{Methods}
 
-\subsection{MABE}
+\subsection{MABE}\label{mabe}
 
 In this work we use the Modular Agent-Based Evolver\cite{bohm_mabe_2017} (MABE) framework to build and run our experiments. MABE allows for the quick construction of agent-based evolution simulations by allowing the scientist to reuse aspects of the system that have already been built by other members of the MABE community. In our work, we use the modules for Markov Brains, Circular Haploid Genomes, simple mutation-only reproduction via roulette selection, and population data archiving. Our contribution is therefore minimized to simply creating the world module, the module that defines the environment the agent will be evaluated in.
 
-\subsection {Stigmergy World}
+\subsection*{Markov Brains}
+
+
+\subsection {Stigmergy World}\label{world}
 
 The world module is responsible for defining three key aspects of the simulation: The environment, how the agent senses the environment, and how the agent can change the environment.
+
+\subsection*{Map Generation}
 
 In this work, the environment is an $n\times m$ grid surrounded by a wall and filled with smaller wall segments that create obstructions for the agent to navigate around. In addition, the environment contains one home location, where the agent will begin each simulation, and a food location. The environment is constructed by first generating a maze and then removing walls until the desired density of obstacles is reached (Figure \ref{fig:world_explanatory}). This method was chosen to ensure that home and food locations are always reachable by some path through the obstacles.
 
 \input{fig/world_explanatory.tex}
 
 The maze layout, wall removal, home location, and initial food location are all generated randomly during environment construction. A new environment is created before every agent evaluation. Furthermore, the location of food may change during an agent's lifetime according to the rules for food use. When the food must move, it is randomly relocated.
+
+\subsection*{Agent Inputs}
+
 The agent is equipped with a total of $43+k$ bits of sensor data (Figure \ref{fig:sense_explanatory}). The agent has a vision cone that covers 8 cells with the capability of distinguishing 4 environmental states at each location (32 bits), a $3\times 3$ stigmergy proximity sensor centered on the agent's location (9 bits), an internal compass that provides a two-bit representation of the four cardinal directions, and a stigmergy read sensor that senses the $k$ bit stigmergy signal. In this work we have set $k$ to be $1$, disallowing the agent access to multiple, distinguishable, stigmergy signals. The agent receives input from each of its sensors at every world update.
 
 \input{fig/sense_explanatory.tex}
+
+\subsection*{Agent Outputs}
 
 The agent has a total of $2+k$ output bits. The agent moves throughout the environment via tank controls (Figure \ref{fig:movement_explanatory}) (2 bits). The agent can make no movement by outputting $00$ to the movement bits. The agent also writes $k$ bits to the current location in the form of a stigmergy signal. Writing all zeros is the same as writing no signal. The agent will always output signal on every world update, however it can choose to do nothing by writing zeros to the move bits, stigmergy bits, or all output bits. Recall that we have set $k$ to be $1$ in this work, so the agent can only write a single kind of signal or write no signal.
 
 \input{fig/movement_explanatory.tex}
 
+\subsection*{Agent Fitness Function}
+
+During its lifetime (1000 world updates), each agent is tasked with foraging for food, indicated by the food marker on the grid, and returning to the home location with some of it. Each time the agent picks up a piece of food, by stepping on the food location, it reciecves $+1$ to its fitness. If the agent sucessfully returns home with the food in hand, the agent recieves $+10$ to its fitness. The food location will provide food to the agent a random number of times, between 5 and 10, and then change location on the map. The agent who can quickly locate food, and efficiently make trips between the food and its home, will achieve the highest fitness. Furthermore, each time the agent takes a step forward, or places a stigmergic pheromone, the agent recieces $+0.001$ fitness. Over the course of the agent's lifetime these minor fitness payouts can sum to no greater than $2$ points. These small fitness payouts are there to encourage agents to use their outputs and begin walking or secreting pheromone early in the evolutionary run, but are kept small enough that once an agent is capable of scoring points from foraging these minor payouts will be neglegable to selection.
+
 \subsection {Experimental Design}
 
-The hypothesis being tested in this work is that the selective pressures that encourage stigmergy to evolve are those elements of the agent's experience that disrupt the agent's ability to form internal cognitive representations about its environment.
+Our goal with this work is to investigate how pheromone evaporation rate affects the fitness of evolved foraging strategies and the degree to which these evolved strategies depend on stigmergy. We hypothesize that evaporation rates that are too extreme, either too slow or too fast, will have low fitness and put selective pressure against the use of stigmergy. 
+
+To test this hypothesis we first explore the parameter space of our world to determine where agents evolve the most fit strategies without stigmergy. We then use these parameter values to conduct the final experiment with stigmergy. This is done to help mitigate the posability that stigmergic strategies evolve primarily due to a fundamental limitation on the agent's ability to solve the problem without it.
+
+All agents are evaluated five times in a generation and their scores from these five evaluations are averaged and reported as the agent's fitness for that generation. This is done to help ensure that agents who are placed in an environment that is exceedingly complamentary to their current strategy do not benifit from this lucky event. Rather, agents must have a strategy that is fit, on agerage, in 5 diferent environments, reducing the probability of fixation of lucky but generally unfit agents.
+
+\subsection*{Obstacle Density}
+
+As discussed in section \ref{world}, the environment is generated by first building a maze and then randomly removing walls. The percentage of walls that are removed can be varied between 0.00, or a complete maze, and 1.00, an empty $n-1 \times m-1$ grid surrounded on all sides by walls. We evolve our agents in environments charactorized by 0.00, 0.20, 0.40, 0.60, 0.80, and 1.00 percent wall removal.
+
+\subsection*{Agent Memory}
+
+As discussed in section \ref{mabe}, we used the Markov Brain MABE module to controll our agents behavior. Markov brains can have any number of hidden nodes which provide the brain with the capability of internal memory. However, too few hidden nodes might make the agent incapable of evolving a fit strategy to a complex problem like stigmergy world, yet too many can make the process of evolution far too slow to do meaningful science. Therefore we evolve agents that have 0, 1, 2, 4, 8, 16, 32, 64, and 128 hidden nodes to determine where agents are most fit.
+
+\subsection*{Stigmergic Chemical Evaporation Rate}
+
+With the previous two tests completed, we conduct our main experiment to determine how pheromone evaporation affects evolved foraging strategies and to what degree these strategies depend on the use of these pheromones as stigmergic signals.
