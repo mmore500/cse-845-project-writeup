@@ -1,31 +1,37 @@
 \section{Introduction}
 
-Power law distributions in Nature usually signal the absence of a
-scale in the region where the scaling is observed, and sometimes point
-to critical dynamics. In Self-Organized-Criticality (SOC)
-\cite{BTW87,BTW88}, for example, power law distributions reveal the
-dynamics of an unstable critical point, brought about by slow driving
-and a feed-back mechanism between order parameter and critical
-parameter.  The critical dynamics is usually described within the
-language of second-order phase transitions in condensed matter systems
-\cite{SJD}, but it can be shown that SOC-type behavior also occurs
-within a dual description in terms of the Landau-Ginzburg equation as
-{\em first-order} transitions \cite{GS}.  Indeed, it was shown that a
-power law distribution of {\em epoch-lengths}, that is, the time a
-particular species dominates the dynamics of an adapting population,
-is explained by a self-organized critical scenario \cite{CA2} that
-carries the hallmark of first-order phase transitions. Here, we
-measure the distribution of abundances of {\em species} and genotypes
-in an artificial chemistry, and show that the distribution is scale-free under
-a broad class of circumstances, confirming the results reported in
-\cite{CA2}.  In the next section, we discuss the first-order dynamics
-in more detail and examine ``avalanches of invention'' from the point
-of view of a thermodynamics of information. In Section III, we measure
-the critical exponent of the power law of genotype abundances in the
-limit of infinitesimal driving, i.e., infinitesimal mutation rate, and
-discuss the role of the fitness landscape in shaping the
-distribution. In Section IV, we repeat the analysis for a higher
-taxonomic level (that of species) and discuss its relation to the
-geometric distributions found by \cite{BUR90,BUR93}.
-Conclusions about the evolutionary process drawn from the data
-obtained in this paper are presented in Section V.
+Stigmergy is an indirect mechanism of coordination, where an action is left on the environment to stimulate the performance of a future action \cite{susi_social_2001, ahadeli_multi-agent_2004}.
+Pierre-Paul Grassét created this idea in 1959 when studying termite social behavior \cite{heylighen_stigmergy_2016a}.
+Most often stigmergy is studied in a group setting, but can also be important in studying self- organizing behavior \cite{heylighen_stigmergy_2016b}.
+Stigmergy is most attributed to insect colony migration and food savaging.
+This type of stigmergy evolved the use of marker-based stigmergy \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016b}, where a pheromone is left on the environment to stimulate an action from another member of the colony or self.
+Marker based stigmergy is the most common stigmergy used in social insect groups because of the evolved common knowledge of released pheromones.
+But in some environments, such as a desert, there is a high pheromone volatility, which results in the evolution of the Sematectonic stigmergy \cite{ahadeli_multi-agent_2004}.
+Due to the high volatility, the organisms choose to change the environment to stimulate a reaction rather then placing down a pheromone.
+This type of stigmergy is often seen in desert ants where the high environmental temperature and direct sunlight causes a high volatility to the pheromones.
+Due to these factors modifying the environment, rather then a placement of a pheromone is a more stable signal (TODOCITE).
+Another factor that stimulates the production of Sematectonic stigmergy agents is nest construction.
+This allows the workers to systematically move building pillars during the later stage of nest construction \cite{dorigo_ant_2000, dorigo_ant_2000}.
+
+Additionally, another factor the organism has control over and evolved the use of is the amount of stigmergy pheromones released into the environment and the pheromone’s relative strength.
+Stigmergic organisms have a choice in the strength and the kind of pheromone that is released \cite{dorigo_ant_2000}.
+When the change in strength relates to a different signal, such as location to the food source this relates to quantitative stigmergy.
+If the difference of the response is directly related to the change in type of pheromones, then this results in Qualitative stigmergy.
+\cite{heylighen_stigmergy_2016b}.
+This is seen in the ant species Monomorium pharaonis where there is the production of both an attractive and repellent pheromone based on the desired outcome of the group \cite{jeanson_pheromone_2003}.
+Stigmergy is not only used in ant and insect models, it is also used in many other organisms.
+Bacteria are also an organism that has shown to have a wide use of stigmergy.
+Biofilm formation is a key role in bacterial survival and due to this the bacteria has evolved the use of stigmergy \cite{gloag_bacterial_2015}.
+A biofilm is a attachment of organisms together on a surface.
+Often biofilms are associated with higher antibiotic resistance and survival \cite{donlan2002biofilms}.
+\textit{Pseudomonas aeruginosa} are able to move in the environment by twitching motility and the type IV pili \cite{persat2015type}.
+This motility uses the type IV pilli that creates channels as they move during the production of the biofilm.
+This allows other bacteria to follow and aide in the production of the biofilm \cite{gloag_stigmergy:_2013}.
+
+A major reason of the widespread use of stigmergy in ant populations is the volatility of the released pheromone.
+Since the environment and the food sources are not always a constant factor, the ants have evolved the use of different volatile pheromones in relationship to the stability of the target \cite{jeanson_pheromone_2003}.
+In the ant colonies of \textit{Atta columbica} their released pheromones can persist for many years \cite{howard_costs_2001}.
+This long half-life is contributed to the constant availability of a high quality food source.
+Alternatively, the \textit{Monomorium pharaonis} is able to produce a short half-life pheromone that decays within minutes of production, which guides worker ants to the food source currently available \cite{robinson_decay_2008}.
+Since the stability of the food source is relatively low in these ant environments, a constant replenishing of the pheromone is required.
+It could be concluded that the volatility of the pheromones is in direct relationship to the stability of the food sources.
