@@ -37,3 +37,22 @@ It has been shown that desert ant do not use pheromones to recruit worke as grou
 There are many factors that contribute to the evolution of stigmergic strategies.
 It can be directly related to the difficulty of an agent to navigate their specific environment.
 Furthermore, the inability for the agent to form internal representation of their environment has a direct influence on the evolution of stigmergic strategies.
+
+An abundance of mathematical and computational models of stigmergy-based navigation have been developed and studied extensively \cite{perna2012individual, ryan2016model}.
+Numerical evaluation of differential equation models have yielded emergent patterns closely resembling the colony-level foraging behaviors of ants.
+Such models are generally parameterized using values drawn directly from biological observations.
+Computational agent-based models with manually-designed agent algorithms have also yielded emergent patterns closely resembling the colony-level foraging behaviors of ants \cite{robinson2008agent, pratt2005agent}.
+Many agent-based models fall under the umbrella of Ant Colony Optimization (ACO) \cite{dorigo1996ant}, an applied problem-solving technique used to tackle challenges like the traveling salesman problem \cite{dorigo1997ant, bianchi2002ant}.
+Some work has been done using evolution-inspired techniques like evolutionary strategies and the genetic algorithm to optimize parameters, including pheromone evaporation rate, of these models \cite{kuyucu2012evolutionary, sauter2002evolving}.
+Self-adaptive methods of pheromone evaporation rate optimization have also been developed \cite{mavrovouniotis2014ant, mavrovouniotis2013adapting}.
+Panait et al. explored how pheromone diffusion and evaporation rate affected amount of food items foraged in their model, finding that intermediate pheromone diffusion rates maximized foraging performance and that foraging performance decreased at high pheromone evaporation rates \cite{panait2004ant}.
+
+Still other computational agent-based models evolve agent behavior in a more open-ended fashion using evolving artificial neural networks (EANN) \cite{collins1991antfarm} or genetic programming \cite{connelly2009evolving}, providing a unique opportunity to investigate questions about the evolution of stigmergy-based navigation behavior.
+However, to our knowledge work has not been done to systematically explore pheromone evaporation rate on behavior in such open-ended evolving systems.
+
+The pheromone evaporation rate is of great interest in the context of comparisons between collective behavior mediated by stigmergy and cognition, providing an analogy to short-term versus long-term memory and harboring implications with respect to to the speed-accuracy trade-off \cite{couzin2009collective, correia2017role}.
+As such, understanding the evolutionary implications of stigmergic volatility are pertinent to questions of the evolution of intelligence.
+Less abstractly, it is also of interest to understanding the relationship between pheromone volatility and food source permanence \cite{howard_costs_2001,robinson_decay_2008}.
+
+We set out to investigate how pheromone evaporation rate affects the effectiveness of evolved navigation strategies and the extent to which evolved navigation strategies depend on stigmergy.
+% We are interested in this question in relation to the permanence of the foraging food source.
