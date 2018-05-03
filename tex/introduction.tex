@@ -2,47 +2,50 @@
 
 Stigmergy is an indirect mechanism of coordination where an action alters the environment and the changed environment, in turn, alters the likelihood of future actions. \cite{susi_social_2001, ahadeli_multi-agent_2004}.
 Pierre-Paul Grassét coined the term in 1959 when studying termite social behavior \cite{heylighen_stigmergy_2016a}.
-Most often, stigmergy is studied in a group of organisms, however self-organization has also been studied.  \cite{heylighen_stigmergy_2016b}.
-Stigmergy is most associated with  insect colony migration and food scavenging.
-The common type of stigmergy is marker-based stigmergy \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016b}, where a pheromone is left on the environment to stimulate a future  action.
+Most often, stigmergy is studied in a group of organisms, however, self-organization has also been studied.  \cite{heylighen_stigmergy_2016b}.
+
+Stigmergy is most associated with insect colony migration and food scavenging.
+The common type of stigmergy is marker-based stigmergy \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016b}, where a pheromone is left on the environment to stimulate a future action.
 Social insect groups likely evolved to use marker based stigmergy because of a common behavioral response to a commonly produced pheromone.
-But in some environments, such as a desert, there is a high pheromone volatility, likely do to high temperatures, which results in the use of sematectonic stigmergy, where the environment or a change of environment stimulates a response \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016a}. It has been shown that desert ants do not use pheromones to coordinate working as group but rather evolved to use pheromones for foraging on their own \cite{ruano_high_2000}.
+
+However in an arid desert environment there is a high pheromone volatility, likely due to high temperatures, which results in the use of sematectonic stigmergy, where the environment or a change of environment stimulates a response \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016a}. It has been shown that desert ants do not use pheromones to coordinate working as a group but rather evolved to use pheromones for foraging on their own \cite{ruano_high_2000}.
 Many insect colonies share a common use of sematectonic stigmergy, leveraging it to aid in nest construction. Stigmergy allows the workers to systematically move support pillars during the later stage of nest construction \cite{dorigo_ant_2000,khuong_stigmergic_2016}.
 
-Stigmergic organisms have a range of strengths and of kinds of pheromone that is released \cite{theraulaz1999brief}.
-When different pheromone  strength stimulate different responses  this called quantitative stigmergy. If different  response is stimulated by different pheromones then this know as  Qualitative stigmergy \cite{heylighen_stigmergy_2016b}.
-This is seen in the ant species \textit{Monomorium pharaonis} where both an attractive and repellent pheromone are produced  \cite{jeanson_pced heromone_2003}.
-Stigmergy is not only used in ant and insect models, it is also used by many other organisms.
-Bacteria are another class of organism that have shown to use stigmergy.
-Biofilm formation plays a key role in bacterial survival and bacteria use stigmergy to produce it \cite{gloag_bacterial_2015}.
-A biofilm is a attachment of organisms together on a surface.
-Often biofilms are associated with higher antibiotic resistance and survival \cite{donlan2002biofilms}.
+Stigmergic organisms can have a range of strengths and of kinds of pheromones at their disposal \cite{theraulaz1999brief}.
+When different pheromone strengths stimulate different responses the stigmergy is classified as quantitative stigmergy. If different responses are stimulated by different pheromones it is classified as qualitative stigmergy \cite{heylighen_stigmergy_2016b}.
+This is exemplified by the ant species \textit{Monomorium pharaonis} where both an attractive and repellent pheromone are produced \cite{jeanson_pheromone_2003}.
+
+Stigmergy is not only used by ants and insects, it is also used by many other organisms.
+Bacteria are another class of organism that has been shown to use stigmergy.
+Biofilm formation plays a key role in bacterial survival and some bacteria leverage stigmergy to assist in producing it \cite{gloag_bacterial_2015}.
+A biofilm is an attachment of organisms together on a surface.
+Often biofilms are associated with higher antibiotic resistance \cite{donlan2002biofilms}.
 \textit{Pseudomonas aeruginosa} is able to move in the environment by twitching motility and the type IV pili \cite{persat2015type}.
-This motility uses the type IV pili which creates channels as they move during the production of the biofilm.
-This allows other bacteria to follow and aide in the production of the biofilm \cite{gloag_stigmergy:_2013}.
+This motility uses the type IV pili to create channels as they move during the production of the biofilm.
+This allows other bacteria to follow and aid in the production of the biofilm \cite{gloag_stigmergy:_2013}.
 
-Since the environment and the food sources are not always a constant factor, the ants have evolved the use to use  different pheromones in relationship to the stability of the target \cite{jeanson_pheromone_2003}.
+Since the state of the environment and the location of food sources are not always a constant factor, some ants have evolved the use different pheromones in response to the stability of the target \cite{jeanson_pheromone_2003}.
 \textit{Atta columbica} pheromones can persist for many years \cite{howard_costs_2001}.
-This long half-life is attributed to the constant availability of a high quality food source.
-Alternatively, the \textit{Monomorium pharaonis} produces pheromone with a short half-life that decays within minutes of production, which guides worker ants to only the food source currently available \cite{robinson_decay_2008}.
-Since the stability of the food source is relatively low in these ant environments, a constant replenishing of the pheromone is required.
-It could be concluded that the volatility of the pheromones is in direct relationship to the stability of the food sources.
-The environment also plays a role in the amount of stigmergic pheromones are placed in the environment.
-It has been shown that the unstable and changing the environment is the more pheromones the ants will place down \cite{czaczkes2015trail}.
+The long half-life of their pheromone is attributed to the constant availability and high quality of their food source.
+Alternatively, the \textit{Monomorium pharaonis} produces pheromone with a short half-life that decays within minutes of production, which guides worker ants only to the food sources currently available \cite{robinson_decay_2008}.
+Since the stability of the food source is relatively low in these ant's environments, a strategy requiring a constant replenishing of the pheromone is optimal.
+The volatility of the organism's pheromones appears to have been correlated to the relative stability of the organism's food source.
+The environment also plays a role in the number of stigmergic pheromones that are placed in the environment.
+It has been shown that unstable and changing environments correlate to more pheromone being placed down by the ants \cite{czaczkes2015trail}.
 
-An abundance of mathematical and computational models of stigmergy-based navigation have been developed and studied extensively \cite{perna2012individual, ryan2016model}.
-Numerical evaluation of differential equation models have yielded emergent patterns closely resembling the colony-level foraging behaviors of ants.
+An abundance of mathematical and computational models of stigmergy-based navigation has been developed and extensively studied \cite{perna2012individual, ryan2016model}.
+Numerical evaluation of differential equation models has yielded emergent patterns closely resembling the colony-level foraging behaviors of ants.
 Such models are generally parameterized using values drawn directly from biological observations.
 Computational agent-based models with manually-designed agent algorithms have also yielded emergent patterns closely resembling the colony-level foraging behaviors of ants \cite{robinson2008agent, pratt2005agent}.
 Many agent-based models fall under the umbrella of Ant Colony Optimization (ACO) \cite{dorigo1996ant}, an applied problem-solving technique used to tackle challenges like the traveling salesman problem \cite{dorigo1997ant, bianchi2002ant}.
-Some work has been done using evolution-inspired techniques like evolutionary strategies and the genetic algorithm to optimize parameters, including pheromone evaporation rate, of these models \cite{kuyucu2012evolutionary, sauter2002evolving}.
+Some work has been done using evolution-inspired techniques like evolutionary strategies and genetic algorithms to optimize parameters, including pheromone evaporation rate, of these models \cite{kuyucu2012evolutionary, sauter2002evolving}.
 Self-adaptive methods of pheromone evaporation rate optimization have also been developed \cite{mavrovouniotis2014ant, mavrovouniotis2013adapting}.
-Panait et al. explored how pheromone diffusion and evaporation rate affected amount of food items foraged in their model, finding that intermediate pheromone diffusion rates maximized foraging performance and that foraging performance decreased at high pheromone evaporation rates \cite{panait2004ant}.
+Panait \textit{et al.}\cite{panait2004ant} explored how pheromone diffusion and evaporation rate affected the number of food items foraged in their model, finding that intermediate pheromone diffusion rates maximized foraging performance and that foraging performance decreased at high pheromone evaporation rates.
 
-Still other computational agent-based models evolve agent behavior in a more open-ended fashion using evolving artificial neural networks (EANN) \cite{collins1991antfarm} or genetic programming \cite{connelly2009evolving}, providing a unique opportunity to investigate questions about the evolution of stigmergy-based navigation behavior.
+Still, other computational agent-based models evolve agent behavior in a more open-ended fashion using evolving artificial neural networks (EANN) \cite{collins1991antfarm} or genetic programming \cite{connelly2009evolving}, providing a unique opportunity to investigate questions about the evolution of stigmergy-based navigation behavior.
 However, to our knowledge work has not been done to systematically explore pheromone evaporation rate on behavior in such open-ended evolving systems.
 
-The pheromone evaporation rate is of great interest in the context of comparisons between collective behavior mediated by stigmergy and cognition, providing an analogy to short-term versus long-term memory and harboring implications with respect to to the speed-accuracy trade-off \cite{couzin2009collective, correia2017role}.
+The pheromone evaporation rate is of great interest in the context of comparisons between collective behavior mediated by stigmergy and cognition, providing an analogy to short-term versus long-term memory and harboring implications with respect to the speed-accuracy trade-off \cite{couzin2009collective, correia2017role}.
 As such, understanding the evolutionary implications of stigmergic volatility are pertinent to questions of the evolution of intelligence.
 Less abstractly, it is also of interest to understanding the relationship between pheromone volatility and food source permanence \cite{howard_costs_2001,robinson_decay_2008}.
 
