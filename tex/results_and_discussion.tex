@@ -23,8 +23,21 @@ Figure \ref{fig:hidden_node_count_average_fitness} shows the relationship betwee
 Unsurprisingly, performance was maximized at an intermediate Markov brain hidden node count, which provides a balance between enabling sophisticated behaviors and inducing evolvability issues related to vanishing probability of useful connectivity establishment due to excess nodes.
 To maximize the potential performance of non-stigmergic foraging strategies relative to stigmergic strategies, we chose to run all subsequent experiments with eight Markov brain hidden nodes.
 
-\subsection{Pheromone Evaporation Rate and Foraging Task Performance}
-\input{fig/knockout_rel_fit_stig_delay.tex}
+\subsection{Pheromone Evaporation Delay and Foraging Task Performance}
+
 \input{fig/pheromone_evaporation_delay_average_fitness.tex}
+\input{fig/knockout_rel_fit_stig_delay.tex}
+
+We evaluated the effect of pheromone volatility on foraging effectiveness by comparing mean foraging performance of populations evolved for 20,000 generations across a spectrum of pheromone evaporation delays, ranging near-instantaneously transient to effectively permanent.
+Each treatment was replicated in 142 independent runs.
+As shown in Figure \ref{fig:pheromone_evaporation_delay_average_fitness}, the foraging performance of evolved agents peaks at an intermediate pheromone evaporation delay of 50 updates;
+population mean foraging rates at 1 and 1000 update stigmergy evaporation delays were significantly less than population mean foraging rates measured with stigmergy evaporation delays between 5 and 100 updates ($p < 0.05$; independent t-test).
+
+In order to understand how stigmergic volatility affected the format of evolved navigational behaviors, we performed knockouts of stigmergic cues on individuals sampled from populations evolved for 20,000 generations across the same spectrum of pheromone evaporation delays.
+We performed knockout analysis on one individual sampled arbitrarily from the final population of each of the 142 independent replicates of each pheromone evaporation delay treatment.
+Figure \ref{fig:knockout_rel_fit_stig_delay} shows knockout foraging task performance as a proportion of pre-knockout foraging task performance for individuals evolved under different pheromone evaporation delay conditions.
+Pre-knockout foraging performance was assessed using the same pheromone evaporation delay each agent evolved under.
+Knockout effects were significantly less severe for strategies evolved with 1 and 1000 update stigmergy evaporation delays than for populations evolved with stigmergy evaporation delays between 5 and 100 updates ($p < 0.05$; independent t-test).
+It appears that when stigmergic signals are either too transient or too permanent, navigational behaviors that are generally less reliant on stigmergic cues are favored.
 
 %\subsection{Pheromone Evaporation Rate and Food Permanence}
