@@ -6,7 +6,7 @@ In this work we use the Modular Agent-Based Evolver\cite{bohm_mabe_2017} (MABE) 
 
 \subsection*{Markov Brains}
 
-We used Markov brains in this work as the evolved controller of our agents. The Markov brains used here consist of four major components: The input vector, output vector, hidden vector, and logic gates. The first three components are simply vectors of values, typically bits, that the gate components can read from and write to. The size of the input, output, and hidden vectors must be decided before the brain is built. The sizes of the input and output vectors are determined by the world module (Section \ref{world}). The size of the hidden vector is independent and is a tunable parameter. 
+We used Markov brains in this work as the evolved controller of our agents. The Markov brains used here consist of four major components: The input vector, output vector, hidden vector, and logic gates. The first three components are simply vectors of values, typically bits, that the gate components can read from and write to. The size of the input, output, and hidden vectors must be decided before the brain is built. The sizes of the input and output vectors are determined by the world module (Section \ref{world}). The size of the hidden vector is independent and is a tunable parameter.
 
 The gates of the Markov brain are, typically, binary logic gates whose input nodes, output nodes, and internal logic are all determined by interpreting the agent's genome. This genome-to-gates interpretation is all handled within MABE's Markov brain module. Gates read from and write to any input, output, or hidden node specified by the genome. Gates can have between 0 and 4 input connections and between 0 and 4 output connections. The smallest functional gate is therefore a one-in-one-out gate whose logic can take on 4 unique configurations. The largest gate possible is a four-in-four-out gate with 256 potential configurations.
 
@@ -42,7 +42,7 @@ During its lifetime (1000 world updates), each agent is tasked with foraging for
 
 \subsection {Experimental Design}
 
-Our goal with this work is to investigate how pheromone evaporation rate affects the fitness of evolved foraging strategies and the degree to which these evolved strategies depend on stigmergy. We hypothesize that evaporation rates that are too extreme, either too slow or too fast, will have low fitness and put selective pressure against the use of stigmergy. 
+Our goal with this work is to investigate how pheromone evaporation rate affects the fitness of evolved foraging strategies and the degree to which these evolved strategies depend on stigmergy. We hypothesize that evaporation rates that are too extreme, either too slow or too fast, will have low fitness and put selective pressure against the use of stigmergy.
 
 To test this hypothesis, we first explore the parameter space of our world to determine where agents evolve the most fit strategies without stigmergy. We then use these parameter values to conduct the final experiment with stigmergy. This is done to help mitigate the possibility that stigmergic strategies evolve primarily due to a fundamental limitation on the agent's ability to solve the problem without it.
 
@@ -59,3 +59,9 @@ As discussed in section \ref{mabe}, we used the Markov Brain MABE module to cont
 \subsection*{Stigmergic Chemical Evaporation Rate}
 
 With the previous two tests completed, we conduct our main experiment to determine how pheromone evaporation affects evolved foraging strategies and to what degree these strategies depend on the use of these pheromones as stigmergic signals. The pheromone evaporation rate is given in units of world updates. We evolved agents with evaporation rates of 1000, 500, 100, 50, 10, 5, and 1. The evaporation rate of 1000 corresponds to permanent pheromone placement, and 1 corresponds to immediate evaporation.
+
+\subsection*{Implementation}
+
+The code used to perform and analyze our experiments, our figures, data from our experiments, tutorials describing how to repeat our experiments and analyses, and video demonstrations of evolved agent behaviors are available via the Open Science Framework at \url{https://osf.io/ydtvs/}.
+Each 20,000 generation evolutionary replicate ran approximately four hours on a single-core compute node.
+In total, experiments reported consumed roughly 16,000 compute hours.
