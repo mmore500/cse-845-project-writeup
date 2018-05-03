@@ -26,7 +26,7 @@ The maze layout, walls removed, home location, and initial food location are all
 
 \subsection*{Agent Inputs}
 
-The agent is equipped with a total of $43+k$ bits of sensor data (Figure \ref{fig:sense_explanatory}). The agent has a vision cone that covers 8 cells with the capability of distinguishing 4 environmental states at each location (32 bits), a $3\times 3$ stigmergy proximity sensor centered on the agent's location (9 bits), an internal compass that provides a two-bit representation of the four cardinal directions, and a stigmergy read sensor that senses the $k$ bit stigmergy signal. In this work we have set $k$ to be $1$, disallowing the agent access to multiple, distinguishable, stigmergy signals. The agent receives input from each of its sensors at every world update.
+The agent is equipped with a total of $43+k$ bits of sensor data (Figure \ref{fig:sense_explanatory}). The agent has a vision cone that covers 8 cells and the capability of distinguishing 4 environmental states at each location (32 bits), a $3\times 3$ stigmergy proximity sensor centered on the agent's location (9 bits), an internal compass that provides a two-bit representation of the four cardinal directions, and a stigmergy read sensor that senses the $k$ bit stigmergy signal. In this work we have set $k$ to be $1$, disallowing the agent access to multiple, distinguishable, stigmergy signals. The agent receives input from each of its sensors at every world update.
 
 \input{fig/sense_explanatory.tex}
 
@@ -58,6 +58,7 @@ As discussed in section \ref{mabe}, we used the Markov Brain MABE module to cont
 
 \subsection*{Stigmergic Chemical Evaporation Rate}
 
+<<<<<<< HEAD
 With the previous two tests completed, we conduct our main experiment to determine how pheromone evaporation affects evolved foraging strategies and to what degree these strategies depend on the use of these pheromones as stigmergic signals. The pheromone evaporation rate is given in units of world updates. We evolved agents with evaporation rates of 1000, 500, 100, 50, 10, 5, and 1. The evaporation rate of 1000 corresponds to permanent pheromone placement, and 1 corresponds to immediate evaporation.
 
 \subsection*{Implementation}
@@ -65,3 +66,6 @@ With the previous two tests completed, we conduct our main experiment to determi
 The code used to perform and analyze our experiments, our figures, data from our experiments, tutorials describing how to repeat our experiments and analyses, and video demonstrations of evolved agent behaviors are available via the Open Science Framework at \url{https://osf.io/ydtvs/}.
 Each 20,000 generation evolutionary replicate ran approximately four hours on a single-core compute node.
 In total, experiments reported consumed roughly 16,000 compute hours.
+=======
+With the previous two tests completed, we conduct our main experiment to determine how pheromone evaporation affects evolved foraging strategies and to what degree these strategies depend on the use of these pheromones as stigmergic signals. The pheromone evaporation rate is given in units of world updates. We evolved agents with evaporation rates of 1000, 500, 100, 50, 10, 5, and 1. The evaporation rate of 1000 corresponds to permanent pheromone placement, and 1 corresponds to immediate evaporation.
+>>>>>>> fb7946668f10695d724bd4e735f7072dc70810ec
