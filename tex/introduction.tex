@@ -1,44 +1,34 @@
 \section{Introduction}
 
-Stigmergy is an indirect mechanism of coordination, where an action is left on the environment to stimulate the performance of a future action \cite{susi_social_2001, ahadeli_multi-agent_2004}.
-Pierre-Paul Grassét created this idea in 1959 when studying termite social behavior \cite{heylighen_stigmergy_2016a}.
-Most often stigmergy is studied in a group setting, but can also be important in studying self- organizing behavior \cite{heylighen_stigmergy_2016b}.
-Stigmergy is most attributed to insect colony migration and food savaging.
-This type of stigmergy evolved the use of marker-based stigmergy \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016b}, where a pheromone is left on the environment to stimulate an action from another member of the colony or self.
-Marker based stigmergy is the most common stigmergy used in social insect groups because of the evolved common knowledge of released pheromones.
-But in some environments, such as a desert, there is a high pheromone volatility, which results in the evolution of the Sematectonic stigmergy where the environment or a change of environment stimulates a response \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016a}.
-Due to the high volatility, the organisms choose use their environment to stimulate a reaction rather then placing down a pheromone.
-A main factor that stimulates the production of Sematectonic stigmergy agents is nest construction. This allows the workers to systematically move building pillars during the later stage of nest construction \cite{dorigo_ant_2000,khuong_stigmergic_2016}.
+Stigmergy is an indirect mechanism of coordination where an action alters the environment and the changed environment, in turn, alters the likelihood of future actions. \cite{susi_social_2001, ahadeli_multi-agent_2004}.
+Pierre-Paul Grassét coined the term in 1959 when studying termite social behavior \cite{heylighen_stigmergy_2016a}.
+Most often, stigmergy is studied in a group of organisms, however self-organization has also been studied.  \cite{heylighen_stigmergy_2016b}.
+Stigmergy is most associated with  insect colony migration and food scavenging.
+The common type of stigmergy is marker-based stigmergy \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016b}, where a pheromone is left on the environment to stimulate a future  action.
+Social insect groups likely evolved to use marker based stigmergy because of a common behavioral response to a commonly produced pheromone.
+But in some environments, such as a desert, there is a high pheromone volatility, likely do to high temperatures, which results in the use of sematectonic stigmergy, where the environment or a change of environment stimulates a response \cite{ahadeli_multi-agent_2004, heylighen_stigmergy_2016a}. It has been shown that desert ants do not use pheromones to coordinate working as group but rather evolved to use pheromones for foraging on their own \cite{ruano_high_2000}.
+Many insect colonies share a common use of sematectonic stigmergy by construction. stigmergy allows the workers to systematically move building pillars during the later stage of nest construction \cite{dorigo_ant_2000,khuong_stigmergic_2016}.
 
-Additionally, another factor the organism has control over and evolved the use of is the amount of stigmergy pheromones released into the environment and the pheromone’s relative strength.
 Stigmergic organisms have a choice in the strength and the kind of pheromone that is released \cite{theraulaz1999brief}.
-When the change in strength relates to a different signal, such as location to the food source this relates to quantitative stigmergy.
-If the difference of the response is directly related to the change in type of pheromones, then this results in Qualitative stigmergy \cite{heylighen_stigmergy_2016b}.
-This is seen in the ant species \textit{Monomorium pharaonis} where there is the production of both an attractive and repellent pheromone based on the desired outcome of the group \cite{jeanson_pheromone_2003}.
-Stigmergy is not only used in ant and insect models, it is also used in many other organisms.
-Bacteria are also an organism that has shown to have a wide use of stigmergy.
-Biofilm formation is a key role in bacterial survival and due to this the bacteria has evolved the use of stigmergy \cite{gloag_bacterial_2015}.
+When different pheromone  strength stimulate different responses  this called quantitative stigmergy. If different  response is stimulated by different pheromones then this know as  Qualitative stigmergy \cite{heylighen_stigmergy_2016b}.
+This is seen in the ant species \textit{Monomorium pharaonis} where both an attractive and repellent pheromone are produced  \cite{jeanson_pced heromone_2003}.
+Stigmergy is not only used in ant and insect models, it is also used by many other organisms.
+Bacteria are another class of organism that have shown to use stigmergy.
+Biofilm formation plays a key role in bacterial survival and bacteria use stigmergy to produce it \cite{gloag_bacterial_2015}.
 A biofilm is a attachment of organisms together on a surface.
 Often biofilms are associated with higher antibiotic resistance and survival \cite{donlan2002biofilms}.
-\textit{Pseudomonas aeruginosa} are able to move in the environment by twitching motility and the type IV pili \cite{persat2015type}.
-This motility uses the type IV pili that creates channels as they move during the production of the biofilm.
+\textit{Pseudomonas aeruginosa} is able to move in the environment by twitching motility and the type IV pili \cite{persat2015type}.
+This motility uses the type IV pili which creates channels as they move during the production of the biofilm.
 This allows other bacteria to follow and aide in the production of the biofilm \cite{gloag_stigmergy:_2013}.
 
-A major reason of the widespread use of stigmergy in ant populations is the volatility of the released pheromone.
-Since the environment and the food sources are not always a constant factor, the ants have evolved the use of different volatile pheromones in relationship to the stability of the target \cite{jeanson_pheromone_2003}.
-In the ant colonies of \textit{Atta columbica} their released pheromones can persist for many years \cite{howard_costs_2001}.
-This long half-life is contributed to the constant availability of a high quality food source.
-Alternatively, the \textit{Monomorium pharaonis} is able to produce a short half-life pheromone that decays within minutes of production, which guides worker ants to the food source currently available \cite{robinson_decay_2008}.
+Since the environment and the food sources are not always a constant factor, the ants have evolved the use to use  different pheromones in relationship to the stability of the target \cite{jeanson_pheromone_2003}.
+\textit{Atta columbica} pheromones can persist for many years \cite{howard_costs_2001}.
+This long half-life is attributed to the constant availability of a high quality food source.
+Alternatively, the \textit{Monomorium pharaonis} produces pheromone with a short half-life that decays within minutes of production, which guides worker ants to only the food source currently available \cite{robinson_decay_2008}.
 Since the stability of the food source is relatively low in these ant environments, a constant replenishing of the pheromone is required.
 It could be concluded that the volatility of the pheromones is in direct relationship to the stability of the food sources.
 The environment also plays a role in the amount of stigmergic pheromones are placed in the environment.
 It has been shown that the unstable and changing the environment is the more pheromones the ants will place down \cite{czaczkes2015trail}.
-Another factor that the environment plays in the use of stigmergy alone or in a group.
-It has been shown that desert ant do not use pheromones to recruit workers as group rather because of the high temperatures evolved the use of pheromones for foraging on their own \cite{ruano_high_2000}.
-
-There are many factors that contribute to the evolution of stigmergic strategies.
-It can be directly related to the difficulty of an agent to navigate their specific environment.
-Furthermore, the inability for the agent to form internal representation of their environment has a direct influence on the evolution of stigmergic strategies.
 
 An abundance of mathematical and computational models of stigmergy-based navigation have been developed and studied extensively \cite{perna2012individual, ryan2016model}.
 Numerical evaluation of differential equation models have yielded emergent patterns closely resembling the colony-level foraging behaviors of ants.
